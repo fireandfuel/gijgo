@@ -406,6 +406,20 @@ gj.tree.config = {
          */
         border: false,
 
+        /** This setting enable deselection of a selected item
+         * @type boolean
+         * @default false
+         * @example Sample <!-- tree -->
+         * <div id="tree"></div>
+         * <script>
+         *     $('#tree').tree({
+         *         dataSource: '/Locations/Get',
+         *         allowDeselection: true
+         *     });
+         * </script>
+         */
+        allowDeselection: false,
+     
         /** The name of the UI library that is going to be in use.
          * @additionalinfo The css file for bootstrap should be manually included if you use bootstrap.
          * @type (materialdesign|bootstrap|bootstrap4)
