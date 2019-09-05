@@ -206,8 +206,9 @@ gj.tree.methods = {
         return function (e) {
             var $display = $(this),
                 $node = $display.closest('li'),
-                cascade = $tree.data().cascadeSelection;
-            if ($node.attr('data-selected') === 'true') {
+                cascade = $tree.data().cascadeSelection,
+                allowDeselection = $tree.data().allowDeselection;
+            if ($node.attr('data-selected') === 'true' && allowDeselection) {
                 gj.tree.methods.unselect($tree, $node, cascade);
             } else {
                 if ($tree.data('selectionType') === 'single') {
